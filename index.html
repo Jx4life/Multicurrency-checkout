@@ -619,7 +619,7 @@
 
         function loadOrderData() {
             const urlParams = new URLSearchParams(window.location.search);
-            orderData.merchantAddress = urlParams.get('merchant') || "0x0000000000000000000000000000000000000000";
+            orderData.merchantAddress = urlParams.get('merchant') || "0x940016CC534a1A7e4F84023EdB45B8730B7657af";
             orderData.orderId = urlParams.get('orderId') || `ORDER-${Date.now()}`;
             orderData.amount = urlParams.get('amount') || "100.00";
 
