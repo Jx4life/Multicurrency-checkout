@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Crypto Checkout - MultiCurrency Payment</title>
-    <script src="https://cdn.ethers.io/lib/ethers-5.7.2.umd.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/ethers@5.7.2/dist/ethers.umd.min.js"></script>
     <style>
         * {
             margin: 0;
@@ -619,7 +619,7 @@
 
         function loadOrderData() {
             const urlParams = new URLSearchParams(window.location.search);
-            orderData.merchantAddress = urlParams.get('merchant') || "0x742d35Cc6634C0532925a3b844Bc9e7595f0bEb";
+            orderData.merchantAddress = urlParams.get('merchant') || "0x0000000000000000000000000000000000000000";
             orderData.orderId = urlParams.get('orderId') || `ORDER-${Date.now()}`;
             orderData.amount = urlParams.get('amount') || "100.00";
 
@@ -774,8 +774,8 @@
                             chainId: CONFIG.chainId,
                             chainName: 'Arc Testnet',
                             nativeCurrency: {
-                                name: 'ETH',
-                                symbol: 'ETH',
+                                name: 'USDC',
+                                symbol: 'USDC',
                                 decimals: 18
                             },
                             rpcUrls: [CONFIG.rpcUrl],
